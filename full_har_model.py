@@ -10,8 +10,8 @@ import simclr_utitlities
 
 
 if __name__ == "__main__":
-
-    total_epochs = 5
+    
+    total_epochs = 2
     batch_size = 200
     tag = "full_eval"
 
@@ -38,4 +38,8 @@ if __name__ == "__main__":
         callbacks=[best_model_callback],
         validation_data=np_val
     )
-    print(simclr_utitlities.evaluate_model_simple(full_evaluation_model.predict(np_test[0]), np_test[1], return_dict=True))
+
+    evaluation = simclr_utitlities.evaluate_model_simple(full_evaluation_model.predict(np_test[0]), np_test[1], return_dict=True)
+    full_har_eval_file = open("full_evaluation/full_har_eval.txt", "w")
+    full_har_eval_file.write(str(evaluation))
+    full_har_eval_file.close()

@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     batch_size = 512
     decay_steps = 1000
-    epochs = 2
+    epochs = 200
     temperature = 0.1
     #lr_decayed_fn = tensorflow.keras.experimental.CosineDecay(initial_learning_rate=0.1, decay_steps=decay_steps)
     #optimizer = tensorflow.keras.optimizers.SGD(lr_decayed_fn)

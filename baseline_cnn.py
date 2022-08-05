@@ -69,12 +69,12 @@ if __name__ == "__main__":
 
     model_json = model.to_json()
 
-    with open('model.json', 'w') as json_file:
+    with open('baseline_model/model.json', 'w') as json_file:
         json_file.write(model_json)
 
-    model.save_weights('model_h5',save_format='h5') #Will only save the weights so that you are able to apply them on a different architecture 
+    model.save_weights('baseline_model/model_h5',save_format='h5') #Will only save the weights so that you are able to apply them on a different architecture 
 
-    model.save('Baseline_CNN') #Saves the whole architecture, weights and the optimizer state - the details needed to reconstitute your model
+    model.save('baseline_model/Baseline_CNN') #Saves the whole architecture, weights and the optimizer state - the details needed to reconstitute your model
     '''
 
     #baseline_model = tensorflow.keras.models.load_model('Baseline_CNN')

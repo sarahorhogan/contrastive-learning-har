@@ -12,7 +12,7 @@ import simclr_utitlities
 if __name__ == "__main__":
 
     
-    total_epochs = 2
+    total_epochs = 50
     batch_size = 200
     tag = "linear_eval"
 
